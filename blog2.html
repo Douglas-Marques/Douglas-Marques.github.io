@@ -17,7 +17,14 @@
   </head>
 
   <body>
-
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
     <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -42,6 +49,7 @@
                <p>Hi everyone! Just passing by here to not leave this page blank. I hope to bring a lot of cool content here soon. Reviews on movies, tv, games, books, comics and food (yes, why not?). And, of course, all I can about programming, these tech stuff, you know? Because I'm a geek above all else.</p>
                </p>
               </article>
+               <div class="fb-comments" data-href="https://www.facebook.com/douglasdgmarques" data-width="500" data-numposts="5"></div>
           </main>
 
           <footer class="mastfoot">
@@ -66,7 +74,7 @@
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Placed at the end of the document so the pages load faster -->    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
