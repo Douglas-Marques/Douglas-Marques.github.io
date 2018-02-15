@@ -6,17 +6,17 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #333;
 }
 
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
+  color: #fff;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
+  background-color: #333;
+  border: .05rem solid #333;
 }
 
 
@@ -27,17 +27,23 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color: #fff;
 }
 
 h1, h2 {
   text-align: center;
+  color: #333;
 }
 
 body {
+  position: relative;
   color: #fff;
   text-align: left;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+
+p {
+  color: #333;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -83,11 +89,13 @@ body {
   color: rgba(255,255,255,.5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
+  color: #333;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
   border-bottom-color: rgba(255,255,255,.25);
+  color: silver;
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -95,7 +103,7 @@ body {
 }
 
 .nav-masthead .active {
-  color: #fff;
+  color: silver;
   border-bottom-color: #fff;
 }
 
@@ -108,13 +116,13 @@ body {
   }
 }
 
-.fb-comments {
-
-}
-
 /*
  * Cover
  */
+
+.lead {
+  text-align: center;
+}
 
 .cover {
   padding: 0 1.5rem;
@@ -122,6 +130,10 @@ body {
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: 700;
+}
+
+.cover-heading {
+  margin-top: 3em;
 }
 
 
@@ -141,11 +153,11 @@ body {
 @media (min-width: 40em) {
   /* Pull out the header and footer */
   .masthead {
-    /*position: fixed;*/
+    position: absolute;
     top: 0;
   }
   .mastfoot {
-    /*position: fixed;*/
+    position: relative;
     bottom: 0;
   }
 
