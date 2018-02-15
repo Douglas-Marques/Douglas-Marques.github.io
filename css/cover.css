@@ -30,9 +30,13 @@ body {
   background-color: #333;
 }
 
+h1, h2 {
+  text-align: center;
+}
+
 body {
   color: #fff;
-  text-align: center;
+  text-align: left;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 
@@ -105,7 +109,7 @@ body {
 }
 
 .fb-comments {
-    
+
 }
 
 /*
@@ -137,11 +141,11 @@ body {
 @media (min-width: 40em) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
+    /*position: fixed;*/
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    /*position: fixed;*/
     bottom: 0;
   }
 
