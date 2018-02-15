@@ -142,6 +142,11 @@ p {
  * Footer
  */
 
+.mypagination {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
 .mastfoot {
   color: rgba(255,255,255,.5);
 }
