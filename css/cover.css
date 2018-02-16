@@ -3,10 +3,18 @@
  */
 
 /* Links */
-a,
+a {
+  color: #333;
+}
+
 a:focus,
 a:hover {
-  color: #333;
+   color: #333;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Custom default button */
@@ -30,9 +38,23 @@ body {
   background-color: #fff;
 }
 
+header {
+  background-color: #333;
+}
+
 h1, h2 {
   text-align: center;
   color: #333;
+}
+
+h3 > a,
+h3 > a:hover {
+  -webkit-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  -o-transform: scale(1.0);
+  -ms-transform: scale(1.0);
+  transform: scale(1.0);
+  color: #fff;
 }
 
 body {
@@ -53,7 +75,7 @@ p {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+  box-shadow: inset 0 0 5rem rgba(0,0,0,.9);
 }
 
 .site-wrapper-inner {
@@ -81,22 +103,20 @@ p {
 }
 
 .masthead-brand {
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
 
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: 700;
-  color: rgba(255,255,255,.5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
-  color: #333;
+  color: silver;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
-  color: silver;
+  color: #fff;
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -104,8 +124,7 @@ p {
 }
 
 .nav-masthead .active {
-  color: silver;
-  border-bottom-color: #fff;
+  color: #fff;
 }
 
 @media (min-width: 48em) {
@@ -134,7 +153,7 @@ p {
 }
 
 .cover-heading {
-  margin-top: 3em;
+  margin-top: 5em;
 }
 
 
