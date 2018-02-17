@@ -18,6 +18,19 @@ a:hover {
 }
 
 aside {
+  text-align: left; 
+  position: relative; 
+  display: table-cell; 
+  font-size: 1.20em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+/*
+
+aside {
   margin-left: 20em; 
   margin-top: 15em;
   float: right; 
@@ -26,6 +39,8 @@ aside {
   display: table-cell; 
   font-size: 1.20em;
 }
+
+*/
 
 aside > ul > li:nth-child(2):focus,
 aside > ul > li:nth-child(2):hover,
