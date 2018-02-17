@@ -17,6 +17,29 @@ a:hover {
   transform: scale(1.1);
 }
 
+aside {
+  margin-left: 20em; 
+  margin-top: 15em;
+  float: right; 
+  text-align: left; 
+  position: fixed; 
+  display: table-cell; 
+  font-size: 1.20em;
+}
+
+aside > ul > li:nth-child(2):focus,
+aside > ul > li:nth-child(2):hover,
+aside > ul > li:nth-child(3):focus,
+aside > ul > li:nth-child(3):hover,
+aside > ul > li:nth-child(4):focus,
+aside > ul > li:nth-child(4):hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
