@@ -20,11 +20,19 @@ function calculateResults() {
   const grauAFinal = document.getElementById('grauAFinal');
   const grauBFinal = document.getElementById('grauBFinal');
 
-  //Compute
+  //Compute notaFinal
   const novoGrauA = parseFloat(grauA.value) * 0.33;
-  const novoGrauB = parseFloat(grauB.value) * 0.67;
-  const notaFinal = novoGrauA + novoGrauB;
-
+  let novoGrauB = 0.0;
+  let conditional = false;
+  //Compute grauB if is blank
+  if(grauB.value === '') {
+    conditional = true;
+    novoGrauB = (6 - novoGrauA) * 1.493;
+    showMessage('Você precisa tirar ' + novoGrauB.toFixed(2) + ' para ficar na média', 'alert-info');
+  } else {
+    novoGrauB = parseFloat(grauB.value) * 0.67;
+  }  
+  const notaFinal = novoGrauA + (novoGrauB * 0.67);
 
   if(isFinite(notaFinal) && notaFinal <= 10) {
     //Clear inputs
@@ -43,7 +51,7 @@ function calculateResults() {
     document.getElementById('loading').style.display = 'none';
 
     //Show Message
-    grauFinal.value >= 6 ? showMessage('Parabéns! Você foi aprovado!', 'alert-success') : showMessage('Parece que alguém vai ter que fazer o GrauC...', 'alert-warning');
+    conditional === false ? grauFinal.value >= 6 ? showMessage('Parabéns! Você foi aprovado!', 'alert-success') : showMessage('Parece que alguém vai ter que fazer o GrauC...', 'alert-warning') : '';
   } else {
     showMessage('Algo deu errado! Confira se as notas estão corretas.', 'alert-danger');
   }
