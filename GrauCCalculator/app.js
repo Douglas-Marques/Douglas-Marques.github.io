@@ -24,15 +24,17 @@ function calculateResults() {
   const novoGrauA = parseFloat(grauA.value) * 0.33;
   let novoGrauB = 0.0;
   let conditional = false;
+  let notaFinal = 0.0;
   //Compute grauB if is blank
   if(grauB.value === '') {
     conditional = true;
     novoGrauB = (6 - novoGrauA) * 1.493;
     showMessage('Você precisa tirar ' + novoGrauB.toFixed(2) + ' para ficar na média', 'alert-info');
+    notaFinal = novoGrauA + novoGrauB;
   } else {
     novoGrauB = parseFloat(grauB.value) * 0.67;
-  }  
-  const notaFinal = novoGrauA + (novoGrauB * 0.67);
+    notaFinal = novoGrauA + novoGrauB;
+  }
 
   if(isFinite(notaFinal) && notaFinal <= 10) {
     //Clear inputs
@@ -41,7 +43,7 @@ function calculateResults() {
 
     //Show points
     grauAFinal.value = novoGrauA.toFixed(2);
-    grauBFinal.value = novoGrauB.toFixed(2);
+    grauBFinal.value = conditional === false ? novoGrauA.toFixed(2) : (novoGrauB * 0.67).toFixed(2);
     grauFinal.value = notaFinal.toFixed(2);
 
     //Show Results
@@ -84,7 +86,7 @@ function showMessage(message, alert) {
   card.insertBefore(messageDiv, heading);
 
   //Clear error after 3 seconds
-  setTimeout(clearMessage, 3000);
+  setTimeout(clearMessage, 5000);
 }
 
 //Clear Message
