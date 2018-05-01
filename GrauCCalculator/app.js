@@ -46,7 +46,7 @@ function calculateResults() {
 
       //Show points
       grauAFinal.value = novoGrauA.toFixed(2);
-      grauBFinal.value = conditional === false ? novoGrauA.toFixed(2) : (novoGrauB * 0.67).toFixed(2);
+      grauBFinal.value = conditional === false ? novoGrauB.toFixed(2) : (novoGrauB * 0.67).toFixed(2);
       grauFinal.value = notaFinal.toFixed(2);
 
       //Show Results
