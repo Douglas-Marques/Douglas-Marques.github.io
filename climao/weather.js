@@ -6,7 +6,7 @@ class Weather {
 
   // Fetch weather from API
   async getWeather() {
-    const response = await fetch(`https://api.hgbrasil.com/weather/?format=json&city_name=${this.city}&key=${this.apiKey}`);   
+    const response = await fetch(`https://api.hgbrasil.com/weather/?format=json-cors&city_name=${this.city}&key=${this.apiKey}`);   
     const responseData = await response.json();
     return responseData.results;
   }
