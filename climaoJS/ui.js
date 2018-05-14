@@ -12,7 +12,6 @@ class UI {
   }
 
   async paint(weather) {
-    console.log(weather);
     this.location.textContent = `${weather.name}, ${weather.state}`;
     this.desc.textContent = weather.data.temperature + ' °C';
     this.string.textContent = weather.data.condition;
