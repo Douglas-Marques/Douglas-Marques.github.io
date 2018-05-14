@@ -7,7 +7,7 @@ class Weather {
   // Fetch weather from API
   async getWeather() {
     return this.getCity().then(async results => {
-      const response = await fetch(`http://apiadvisor.climatempo.com.br/api/v1/weather/locale/${results}/current?token=${this.apiKey}`);   
+      const response = await fetch(`https://apiadvisor.climatempo.com.br/api/v1/weather/locale/${results}/current?token=${this.apiKey}`);   
       const responseData = await response.json();
       return responseData;});
   }
@@ -19,7 +19,7 @@ class Weather {
 
   // Search and Fetch city from API
   async getCity() {
-    const response = await fetch(`http://apiadvisor.climatempo.com.br/api/v1/locale/city?name=${this.city}&token=${this.apiKey}`);
+    const response = await fetch(`https://apiadvisor.climatempo.com.br/api/v1/locale/city?name=${this.city}&token=${this.apiKey}`);
     const responseData = await response.json();
     return responseData[0].id;
   };  
