@@ -17,7 +17,7 @@ class UI {
     this.string.textContent = weather.data.condition;
     this.humidity.textContent = `Umidade relativa do ar: ${weather.data.humidity}`;
     this.feelsLike.textContent = `Atualização: ${weather.data.date}`;
-    this.dewpoint.textContent = `Sensação térmica: ${weather.data.sensation}`;
-    this.wind.textContent = `Velocidade do vento: ${weather.data.wind_velocity}`;
+    this.dewpoint.textContent = `Sensação térmica: ${weather.data.sensation} °C`;
+    this.wind.textContent = `Velocidade do vento: ${weather.data.wind_velocity} Km/h`;
   }
 }
