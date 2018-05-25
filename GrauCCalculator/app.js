@@ -35,8 +35,8 @@ function calculateResults() {
       showMessage('Você precisa tirar ' + novoGrauB.toFixed(2) + ' para ficar na média', 'alert-info');
       notaFinal = novoGrauA + novoGrauB;
     } else {
-      novoGrauB = parseFloat(grauB.value) * 0.67;
-      notaFinal = novoGrauA + novoGrauB;
+      novoGrauB = parseFloat(grauB.value);
+      notaFinal = novoGrauA + novoGrauB * 0.67;
     }
 
     if(isFinite(notaFinal) && notaFinal <= 10) {
