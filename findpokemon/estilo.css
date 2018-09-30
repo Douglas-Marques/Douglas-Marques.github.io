@@ -25,13 +25,14 @@ img {
 }
 
 input {
+  text-align: center;
   font-weight: 600;
-  width: 60%;
+  width: 40%;
   color: #000;
   outline: none;
   font-size: 14px;
   padding: 0.6em 0.7em;
-  margin: 0px 0px 23px;
+  margin: 0 0 23px;
   border: none;
   -webkit-appearance: none;
   display: inline-block;
@@ -77,4 +78,26 @@ ul > li {
 
 #info {
   margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    margin-left: -2rem;
+  }
+
+  #principal {
+    box-shadow: none;
+  }
+
+  input {
+    width: 100vh;
+  }
+
+  input[type="button"] {
+    width: 100vh;
+  }
 }

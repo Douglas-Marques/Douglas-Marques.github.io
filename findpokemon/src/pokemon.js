@@ -6,7 +6,7 @@ class Pokemon {
     this._altura = dados.height;
     this._peso = dados.weight;
     this._tipos = dados.types.map(t => t.type.name);
-    this._estatisticas = dados.stats.map(t => t.stat.name + " " + t.base_stat);
+    this._estatisticas = dados.stats.map(s => s.stat.name + " " + s.base_stat);
   }
 
   get nome() {
