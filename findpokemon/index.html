@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Pokemon Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div id="principal" class="meuPrimeiroApp">
+        <input type="number" maxlength="3" min="1" max="802" id="num" placeholder="Digite um número" v-on:blur="checarNumero()"
+            v-model="idParaBuscar">
+        <input type="button" value="Estou com sorte!" id="sorte" v-on:click="buscaRandomica()">
+        <h1 v-if="alerta">{{ alerta }}</h1>
+        <ul v-else id="info">
+            <h1>{{ pokemon.nome }}</h1>
+            <img id="img " v-bind:src="pokemon.thumbUrl" v-bind:alt="pokemon.nome">
+            <li v-show="pokemon.id"><span>ID:</span> {{ pokemon.id }}</li>
+            <li v-show="pokemon.altura"><span>Altura:</span> {{ pokemon.altura }} cm</li>
+            <li v-show="pokemon.peso"><span>Peso:</span> {{ pokemon.peso }} Kg</li>
+            <li v-for="tipo in pokemon.tipos"><span>Tipo:</span> {{ tipo }}</li>
+            <li v-for="estatistica in pokemon.estatisticas"><span>{{ estatistica.split(" ")[0] }}: </span>{{
+                estatistica.split(" ")[1] }}</li>
+        </ul>
+    </div>
+
+    <script src="src/pokemon.js"></script>
+    <script src="src/pokeApi.js"></script>
+    <script src="src/app.js"></script>
+</body>
+
+</html>
